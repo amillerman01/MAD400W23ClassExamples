@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IContent } from './models/icontent';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title?: string; // optional variable, default value is undefined
+  contentItem: IContent;
 
   constructor() {
-
+    this.contentItem = {
+      id: 1025,
+      imageUrl:
+        'https://angular.io/assets/images/logos/angular/angular.png',
+      body: 'This is the body of the content',
+      type: 'news'
+    };
     this.title = 'We are learning javascript right meow and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then';
 
     var name = "Peter";
@@ -29,5 +37,12 @@ export class AppComponent {
 
     // programName = 10;
 
+    this.processContent(this.contentItem);
+
+  }
+
+  processContent(content: IContent):string {
+    console.log(content.body);
+    return content.type;
   }
 }
