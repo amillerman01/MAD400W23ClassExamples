@@ -1,6 +1,6 @@
 export interface IContent {
   id: number;
-  type: string;
+  type?: string;
   imageUrl: string;
   body: string;
 }
