@@ -15,8 +15,8 @@ export class AppComponent {
       id: 1025,
       imageUrl:
         'https://angular.io/assets/images/logos/angular/angular.png',
-      body: 'This is the body of the content',
-      type: 'news'
+      // type: "news",
+      body: '<p>This is the body of the content</p>'
     };
     this.title = 'We are learning javascript right meow and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then and then';
 
@@ -43,6 +43,6 @@ export class AppComponent {
 
   processContent(content: IContent):string {
     console.log(content.body);
-    return content.type;
+    return content.type ?? "EMPTY";
   }
 }
