@@ -4,3 +4,5 @@
 <section class="contentBodyUsingHandlebars">{{contentItem.body}}</section>
 
 <section class="contentTypeUsingProcessContentMethod">{{processContent(contentItem)}}</section>
+
+<section class="contentBodyHTMLUsingInnerHTML" [innerHTML]="contentItem.body"></section>
