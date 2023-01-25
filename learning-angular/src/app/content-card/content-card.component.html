@@ -1,4 +1,11 @@
-<img src="{{singleCakeItem.imageUrl}}">
-<p [innerHTML]="singleCakeItem.body"></p>
-<div>{{singleCakeItem.type}}</div>
-<span>{{singleCakeItem.type}}</span>
+<!-- <img src="{{singleCakeItem?.imageUrl}}">
+<p [innerHTML]="singleCakeItem?.body"></p>
+<div>{{singleCakeItem?.type}}</div>
+<span>{{singleCakeItem?.type}}</span> -->
+
+<div *ngIf="singleCakeItem">
+  <img src="{{singleCakeItem.imageUrl}}">
+  <p [innerHTML]="singleCakeItem.body"></p>
+  <div *ngIf="singleCakeItem.type">{{singleCakeItem.type}}</div>
+  <!-- <span>{{singleCakeItem.type}}</span> -->
+</div>
