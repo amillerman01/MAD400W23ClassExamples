@@ -8,6 +8,10 @@ img {
 p {
   background-color: red;
 }
+p:last-child,
+p:last-child ::ng-deep p {
+  margin-bottom: 0;
+}
 div {
   font-weight: bold;
   background-color: cornflowerblue;
