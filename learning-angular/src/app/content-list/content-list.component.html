@@ -1,2 +1,2 @@
 <app-content-card *ngFor="let individualCake of listOfCakes" [singleCakeItem]="individualCake"></app-content-card>
-<div *ngIf="listOfCakes?.length < 1">No Cakes yet :( it was a lie</div>
+<div *ngIf="!listOfCakes || listOfCakes.length == 0">No Cakes yet :( it was a lie</div>
