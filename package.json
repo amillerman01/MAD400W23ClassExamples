@@ -1,0 +1,22 @@
+{
+  "name": "mad400w23classexamples",
+  "version": "1.0.0",
+  "description": "Class Example code for MAD400 in the Winter 2023 semester",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amillerman01/MAD400W23ClassExamples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amillerman01/MAD400W23ClassExamples/issues"
+  },
+  "homepage": "https://github.com/amillerman01/MAD400W23ClassExamples#readme",
+  "dependencies": {
+    "@angular/cli": "^15.1.3"
+  }
+}

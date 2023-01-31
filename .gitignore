@@ -1,0 +1,2 @@
+# Telling GitHub to ignore the node_modules folder, and any files inside of it, when we commit to our repository
+node_modules
