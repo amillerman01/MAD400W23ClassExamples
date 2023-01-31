@@ -1,1 +1,7 @@
-<p>template-reference-var-example works!</p>
+{{ title }}
+
+<p><input #inputElementReference></p>
+
+<div>Text from the input: {{ inputElementReference.value }}</div>
+
+<button (click)="onClick(inputElementReference.value)">Console Log The Input Value</button>
