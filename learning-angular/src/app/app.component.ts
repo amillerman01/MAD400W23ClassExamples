@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContentService } from './services/content.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title?: string; // optional variable, default value is undefined
 
-  constructor() {
+  constructor(private contentService: ContentService) {
     this.title = 'Cake website, that isn\'t a lie';
 
     var name = "Peter";

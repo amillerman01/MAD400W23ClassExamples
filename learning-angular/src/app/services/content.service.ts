@@ -9,4 +9,8 @@ export class ContentService {
 
   constructor() { }
 
+  getContent(): IContent[]{
+    return CONTENT;
+  }
+
 }
