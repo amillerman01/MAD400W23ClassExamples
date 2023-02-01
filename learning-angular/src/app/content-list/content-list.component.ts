@@ -17,10 +17,12 @@ export class ContentListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.listOfCakes = this.contentService.getContent();
+    this.contentService.getContent().subscribe((IContentArrayOfData: IContent[]) => {
+      this.listOfCakes = IContentArrayOfData;
+    });
   }
 
-  processContent(content: IContent):string {
+  processContent(content: IContent): string {
     // console.log(content.body);
     return content.type ?? "EMPTY";
   }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { CONTENT } from '../data/mock-content-db';
 import { IContent } from '../models/icontent';
 
@@ -9,8 +10,11 @@ export class ContentService {
 
   constructor() { }
 
-  getContent(): IContent[]{
-    return CONTENT;
+  getContent(): Observable<IContent[]> {
+    return of(CONTENT);
   }
 
+  getContentItem(index: number): Observable<IContent> {
+    return of(CONTENT[index]);
+  }
 }
