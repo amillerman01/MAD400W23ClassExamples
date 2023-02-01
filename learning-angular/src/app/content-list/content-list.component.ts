@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IContent } from '../models/icontent';
+import { ContentService } from '../services/content.service';
 
 @Component({
   selector: 'app-content-list',
@@ -8,8 +9,10 @@ import { IContent } from '../models/icontent';
 })
 export class ContentListComponent {
   listOfCakes: IContent[];
+  // private contentService: ContentService;
 
-  constructor() {
+  constructor(private contentService: ContentService) {
+    // this.contentService = contentService;
     this.listOfCakes = [];
     this.listOfCakes.push({
       id: 1024,
