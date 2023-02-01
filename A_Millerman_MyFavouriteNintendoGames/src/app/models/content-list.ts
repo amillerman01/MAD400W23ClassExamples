@@ -28,8 +28,10 @@ export class ContentList {
       <h2>${videoGame.title}</h2>
       <img src="${videoGame.imgSrc}">
       <p>${videoGame.description}</p>
-      <span class="author">${videoGame.author}</span>
-      <span class="type">${videoGame.type}</span>`; // this whole string started on line 27!
+      <div class="meta-data">
+        <span class="author">${videoGame.author}</span>
+        <span class="type">${videoGame.type}</span>
+      </div>`; // this whole string started on line 27!
 
     if (videoGame.tags) // if our tags array exists
     {
