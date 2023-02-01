@@ -13,6 +13,14 @@ export class ContentList {
   // set videoGames(g: IContent[]){
   //   this._videoGames = g;
   // }
+
+  addContent(newGame: IContent) {
+    this._videoGames.push(newGame);
+  }
+
+  arrayLength(): number{
+    return this._videoGames.length;
+  }
 }
 
 // example of what it looks like when we use the getter on a ContentList object
