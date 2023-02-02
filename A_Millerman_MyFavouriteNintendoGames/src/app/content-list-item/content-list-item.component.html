@@ -1,1 +1,6 @@
-<p>content-list-item works!</p>
+<!-- Since it's optional, we need to make sure it exists before we use properties from it -->
+<!-- One way to do that is to use an if statement (similar to how we would in JavaScript/TypeScript) -->
+<div *ngIf="contentItemInputValue">
+  <!-- Any code inside the wrapping div is only displayed on the page if contentItemInputValue exists and has a valid value -->
+  <h2>{{contentItemInputValue.title}}</h2>
+</div>
