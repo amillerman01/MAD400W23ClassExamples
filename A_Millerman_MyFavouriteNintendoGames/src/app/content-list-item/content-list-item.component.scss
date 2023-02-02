@@ -5,6 +5,15 @@
   margin: 16px;
   padding: 16px;
   display: inline-block;
+
+  &.even-game {
+    background-color: #edb9e8;
+  }
+}
+// we could have added this inside the :host above like we did for the even-game class, using the & syntax,
+// but this is the equivalent of what angular will generate once the scss is converted to css
+:host.odd-game {
+  background-color: #b0e0e6;
 }
 // Learn more about scss mixins here: https://sass-lang.com/documentation/at-rules/mixin
 @mixin bordered-button-span {
