@@ -3,4 +3,5 @@
 <div *ngIf="contentItemInputValue">
   <!-- Any code inside the wrapping div is only displayed on the page if contentItemInputValue exists and has a valid value -->
   <h2>{{contentItemInputValue.title}}</h2>
+  <img [src]="contentItemInputValue.imgSrc" (click)="imageClicked()">
 </div>
