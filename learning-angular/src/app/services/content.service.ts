@@ -15,6 +15,8 @@ export class ContentService {
   }
 
   getContentItem(index: number): Observable<IContent> {
-    return of(CONTENT[index]);
+    return of(CONTENT.find(contentItem => {
+      return contentItem.id === index;
+    }) as IContent);
   }
 }
