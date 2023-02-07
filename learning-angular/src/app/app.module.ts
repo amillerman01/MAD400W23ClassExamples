@@ -7,6 +7,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { TemplateReferenceVarExampleComponent } from './template-reference-var-example/template-reference-var-example.component';
 import { TwoWayBindingExampleComponent } from './two-way-binding-example/two-way-binding-example.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
