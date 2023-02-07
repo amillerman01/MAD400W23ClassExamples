@@ -8,4 +8,7 @@
   <p [innerHTML]="singleCakeItem.body"></p>
   <div *ngIf="singleCakeItem.type">{{singleCakeItem.type}}</div>
   <!-- <span>{{singleCakeItem.type}}</span> -->
+  <p>
+    <a [routerLink]="singleCakeItem.id + ''">Go to the detail</a>
+  </p>
 </div>
