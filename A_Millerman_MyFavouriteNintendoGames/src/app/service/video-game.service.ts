@@ -15,12 +15,15 @@ export class VideoGameService {
   }
 
   getContentItem(index: number): Observable<IContent> {
+    console.warn("Got to get content item");
     let videoGameFound: IContent = INVALIDGAME;
     for (let i = 0; i < VIDEOGAMES.length; i++){
       if (VIDEOGAMES[i].id == index) {
         videoGameFound = VIDEOGAMES[i];
+        break;
       }
     }
+    console.warn("Got the item", videoGameFound);
     return of(videoGameFound);
   }
 
@@ -45,6 +48,7 @@ export class VideoGameService {
         videoGameFound = VIDEOGAMES[i];
         delete VIDEOGAMES[i];
         console.log("Did the game get deleted? ", VIDEOGAMES);
+        break;
       }
     }
     return of(videoGameFound);
