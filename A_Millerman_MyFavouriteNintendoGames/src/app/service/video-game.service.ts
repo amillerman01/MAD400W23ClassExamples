@@ -23,4 +23,9 @@ export class VideoGameService {
     }
     return of(videoGameFound);
   }
+  addContentItem(item: IContent): Observable<IContent[]>{
+    VIDEOGAMES.push(item);
+    return of(VIDEOGAMES);
+  }
+
 }

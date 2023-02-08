@@ -16,7 +16,26 @@ export class ContentListComponent implements OnInit{
 
   ngOnInit(): void {
     this.videoGameService.getContent().subscribe((videoGames: IContent[]) => {
+      console.log("Getting the game list");
       this.videoGameArray = videoGames;
     });
+
+    this.videoGameService.getContentItem(2).subscribe((videoGame: IContent) => {
+      console.log("Testing getting a single content item: ", videoGame);
+    });
+
+    let testGameToAdd: IContent = {
+      id: 4,
+      title: "The Last Of Us",
+      description: "Some random guy takes on responsibility in a zombie game",
+      author: "Naughty Dog",
+      imgSrc: "https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg",
+      type: "zombie",
+    };
+
+    this.videoGameService.addContentItem(testGameToAdd).subscribe((videoGames: IContent[]) => {
+      console.log("Testing adding a game to the array: ", videoGames);
+    });
+
   }
 }
