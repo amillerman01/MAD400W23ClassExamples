@@ -35,3 +35,11 @@ export const VIDEOGAMES: IContent[] = [{
   imgSrc: "https://upload.wikimedia.org/wikipedia/en/b/b2/Untitled_Goose_Game_Cover_art.jpg",
   type: "Puzzle",
 }];
+
+
+export const INVALIDGAME: IContent = {
+  id: -1,
+  title: "",
+  author: "",
+  type: ""
+};
