@@ -23,8 +23,18 @@ export class VideoGameService {
     }
     return of(videoGameFound);
   }
+
   addContentItem(item: IContent): Observable<IContent[]>{
     VIDEOGAMES.push(item);
+    return of(VIDEOGAMES);
+  }
+
+  updateContentItem(item: IContent): Observable<IContent[]>{
+    let indexOfGameToUpdate = VIDEOGAMES.findIndex(game => {
+      // return if we found it or not. true if found, false if not
+      return game.id == item.id;
+    });
+    VIDEOGAMES[indexOfGameToUpdate] = item;
     return of(VIDEOGAMES);
   }
 
