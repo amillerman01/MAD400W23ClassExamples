@@ -1,1 +1,10 @@
-<p>content-detail works!</p>
+<div *ngIf="detailCakeItem">
+  <span>id: {{detailCakeItem.id}}</span>
+  <img src="{{detailCakeItem.imageUrl}}">
+  <p [innerHTML]="detailCakeItem.body"></p>
+  <div *ngIf="detailCakeItem.type">{{detailCakeItem.type}}</div>
+  <!-- <span>{{detailCakeItem.type}}</span> -->
+  <p>
+    <a [routerLink]="'../' + (detailCakeItem.id + 1) + ''">Go to the next detail</a>
+  </p>
+</div>
