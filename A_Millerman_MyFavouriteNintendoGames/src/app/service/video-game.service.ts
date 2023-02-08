@@ -38,4 +38,17 @@ export class VideoGameService {
     return of(VIDEOGAMES);
   }
 
+  deleteContentItem(index: number): Observable<IContent> {
+    let videoGameFound: IContent = INVALIDGAME;
+    for (let i = 0; i < VIDEOGAMES.length; i++){
+      if (VIDEOGAMES[i].id == index) {
+        videoGameFound = VIDEOGAMES[i];
+        delete VIDEOGAMES[i];
+        console.log("Did the game get deleted? ", VIDEOGAMES);
+      }
+    }
+    return of(videoGameFound);
+  }
+
+
 }

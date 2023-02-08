@@ -50,5 +50,11 @@ export class ContentListComponent implements OnInit{
       console.log("Testing updating a game in the array - Wii Sports should be replaced: ", videoGames);
     });
 
+
+    this.videoGameService.deleteContentItem(3).subscribe((videoGame: IContent) => {
+      console.log("Testing deleting a single item (goose game): ", videoGame);
+    });
+
+
   }
 }
