@@ -1,6 +1,6 @@
 import { IContent } from "../models/icontent";
 
-const VIDEOGAMES: IContent[] = [{
+export const VIDEOGAMES: IContent[] = [{
   id: 0,
   title: "Solomon's Key",
   description: "A really difficult puzzle game on the original Nintendo console",
