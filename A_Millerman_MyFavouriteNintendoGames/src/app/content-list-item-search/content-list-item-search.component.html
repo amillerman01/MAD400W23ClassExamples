@@ -4,5 +4,10 @@
   </label>
   <button (click)="getTheNewItem(customIdNumberInput.value)">Add Item</button>
 </div>
-<app-content-list-item [contentItemInputValue]="singleGame" class="special-item"></app-content-list-item>
+
+<p *ngIf="searchDidNotWork">
+  This is not the content list item you're looking for
+</p>
+<app-content-list-item [contentItemInputValue]="singleGame" class="special-item"
+  *ngIf="!searchDidNotWork"></app-content-list-item>
 <!-- We know the tag name is app-content-list by looking at the "selector" value in the @Component decorator of the content-list.component.ts file -->
