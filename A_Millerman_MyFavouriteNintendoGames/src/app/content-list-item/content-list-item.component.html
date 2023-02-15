@@ -2,7 +2,7 @@
 <!-- One way to do that is to use an if statement (similar to how we would in JavaScript/TypeScript) -->
 <div *ngIf="contentItemInputValue">
   <!-- Any code inside the wrapping div is only displayed on the page if contentItemInputValue exists and has a valid value -->
-  <h2>{{contentItemInputValue.title}}</h2>
+  <h2><a [routerLink]="['/content/', contentItemInputValue.id]">{{contentItemInputValue.title}}</a></h2>
   <img *ngIf="contentItemInputValue.imgSrc" [src]="contentItemInputValue.imgSrc" (click)="imageClicked()">
   <!-- Grabbed the rest of this code from my old ContentList toString in assignment 1 -->
   <!-- and modified it to be Angular syntax instead -->
