@@ -10,7 +10,8 @@
     "newinterface": "ng generate interface",
     "newclass": "ng generate class",
     "newcomponent": "ng generate component",
-    "newservice": "ng generate service"
+    "newservice": "ng generate service",
+    "newRouting": "ng generate module app-routing --flat"
   },
   "private": true,
   "dependencies": {
