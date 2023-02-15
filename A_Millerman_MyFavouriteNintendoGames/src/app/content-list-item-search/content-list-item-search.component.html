@@ -1,3 +1,8 @@
+<div>
+  <label>
+    Item ID: <input type="number" #customIdNumberInput>
+  </label>
+  <button (click)="getTheNewItem(customIdNumberInput.value)">Add Item</button>
+</div>
 <app-content-list-item [contentItemInputValue]="singleGame" class="special-item"></app-content-list-item>
-
 <!-- We know the tag name is app-content-list by looking at the "selector" value in the @Component decorator of the content-list.component.ts file -->
