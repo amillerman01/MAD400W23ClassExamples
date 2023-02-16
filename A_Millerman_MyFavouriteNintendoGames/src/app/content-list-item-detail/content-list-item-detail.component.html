@@ -1,4 +1,7 @@
-<div *ngIf="videoGameDetailItem">
+<a class="back-to-list" routerLink="/content">
+  Back to list
+</a>
+<div *ngIf="videoGameDetailItem" class="content-wrapper">
   <h2>{{videoGameDetailItem.title}}</h2>
   <img *ngIf="videoGameDetailItem.imgSrc" [src]="videoGameDetailItem.imgSrc">
   <p *ngIf="videoGameDetailItem.description" [innerHTML]="videoGameDetailItem.description"></p>
