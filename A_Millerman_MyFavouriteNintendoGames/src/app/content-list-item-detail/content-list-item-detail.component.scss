@@ -2,9 +2,9 @@
   display: block;
   margin-top: 64px;
 }
-.back-to-list {
+.back-to-list,
+.previous-detail {
   position: fixed;
-  left: 16px;
   top: 16px;
   border-radius: 16px;
   padding: 16px;
@@ -12,6 +12,12 @@
   display: inline-block;
   text-decoration: none;
   color: #000000;
+}
+.back-to-list {
+  left: 16px;
+}
+.previous-detail {
+  right: 16px;
 }
 .content-wrapper {
   display: flex;

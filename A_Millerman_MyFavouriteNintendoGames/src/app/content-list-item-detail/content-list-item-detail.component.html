@@ -1,6 +1,10 @@
 <a class="back-to-list" routerLink="/content">
   Back to list
 </a>
+<a *ngIf="videoGameDetailItem && videoGameDetailItem.id > 0" class="previous-detail"
+  [routerLink]="['/content', videoGameDetailItem.id - 1]">
+  Previous detail
+</a>
 <div *ngIf="videoGameDetailItem" class="content-wrapper">
   <h2>{{videoGameDetailItem.title}}</h2>
   <img *ngIf="videoGameDetailItem.imgSrc" [src]="videoGameDetailItem.imgSrc">
