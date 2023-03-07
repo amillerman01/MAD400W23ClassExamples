@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms-example',
@@ -7,15 +7,22 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./reactive-forms-example.component.scss']
 })
 export class ReactiveFormsExampleComponent {
-  name = new FormControl<string>("Chris");
+  studentForm = new FormGroup({
+    fname: new FormControl<string>("Chris", [Validators.required, Validators.minLength(5)]),
+    lname: new FormControl<string>("sirhc")
+  });
 
   constructor() {
-    this.name.valueChanges.subscribe(data => {
+    this.studentForm.controls["fname"].valueChanges.subscribe(data => {
       console.log(data);
     });
   }
 
   changeFromTypescript = () => {
-    this.name.setValue("Ben");
+    this.studentForm.controls["fname"].setValue("Ben");
+  }
+
+  onSubmit() {
+    console.log(this.studentForm);
   }
 }

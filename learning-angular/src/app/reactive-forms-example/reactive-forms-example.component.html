@@ -1,7 +1,13 @@
 <h2>Reactive Forms Example</h2>
-<form method="post" action="/">
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
   <label>
-    Name: <input [formControl]="name">
+    First Name: <input formControlName="fname">
   </label>
-  <button type="submit" (click)="changeFromTypescript()">Submit</button>
+  <label>
+    Last Name: <input formControlName="lname">
+  </label>
+  <p>
+    <!-- {{ name.value }} -->
+  </p>
+  <button type="submit">Submit</button>
 </form>
