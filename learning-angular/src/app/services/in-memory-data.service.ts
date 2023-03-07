@@ -11,6 +11,7 @@ export class InMemoryDataService implements InMemoryDbService {
   constructor() { }
 
   createDb() {
+    // let cakes: IContent[] = [];
     let cakes: IContent[] = CONTENT;
     return { cakes };
   }
