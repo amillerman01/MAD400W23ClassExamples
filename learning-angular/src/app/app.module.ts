@@ -13,6 +13,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TopNavigationComponent } from './top-navigation/top-navigation.component';
 import { ReactiveFormsExampleComponent } from './reactive-forms-example/reactive-forms-example.component';
 
+import { HttpClientModule } from
+  "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from
+  "angular-in-memory-web-api";
+import { InMemoryDataService } from "./services/in-memory-data.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +35,11 @@ import { ReactiveFormsExampleComponent } from './reactive-forms-example/reactive
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      delay: 1000,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

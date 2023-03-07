@@ -16,6 +16,7 @@ export class InMemoryDataService implements InMemoryDbService {
     };
   }
 
+  // this runs when a new item is added to the database
   genId(cakes: IContent[]): number {
     if (cakes.length > 0) {
       let cakeIds: number[] = [];
