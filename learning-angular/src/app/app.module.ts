@@ -38,7 +38,7 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-      delay: 1000,
+      delay: 3000,
     })
   ],
   providers: [],
