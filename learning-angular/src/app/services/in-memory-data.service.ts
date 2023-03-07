@@ -11,9 +11,8 @@ export class InMemoryDataService implements InMemoryDbService {
   constructor() { }
 
   createDb() {
-    return {
-      CONTENT
-    };
+    let cakes: IContent[] = CONTENT;
+    return { cakes };
   }
 
   // this runs when a new item is added to the database
