@@ -7,13 +7,13 @@ import { ContentService } from '../services/content.service';
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent implements OnInit{
-  listOfCakes: IContent[];
+export class ContentListComponent implements OnInit {
+  listOfCakes?: IContent[] = undefined;
   // private contentService: ContentService;
 
   constructor(private contentService: ContentService) {
     // this.contentService = contentService;
-    this.listOfCakes = [];
+    // this.listOfCakes = [];
   }
 
   ngOnInit(): void {
