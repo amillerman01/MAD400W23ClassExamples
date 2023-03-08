@@ -7,6 +7,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ContentService {
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-type':
+        'application/json'
+    })
+  };
 
   constructor(private http: HttpClient) { }
 
@@ -16,5 +22,9 @@ export class ContentService {
 
   getContentItem(index: number): Observable<IContent> {
     return this.http.get<IContent>("api/cakes/" + index)
+  }
+
+  addContent(singleCake: IContent): Observable<IContent> {
+    return this.http.post<IContent>("api/cakes", singleCake, this.httpOptions);
   }
 }
