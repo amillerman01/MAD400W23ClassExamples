@@ -5,6 +5,7 @@
   <div *ngIf="detailCakeItem.type">{{detailCakeItem.type}}</div>
   <!-- <span>{{detailCakeItem.type}}</span> -->
   <p>
-    <a [routerLink]="'../' + (detailCakeItem.id + 1) + ''">Go to the next detail</a>
+    <a *ngIf="detailCakeItem.id != undefined" [routerLink]="'../' + (detailCakeItem.id + 1) + ''">Go to the next
+      detail</a>
   </p>
 </div>

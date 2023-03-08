@@ -21,6 +21,8 @@ export class InMemoryDataService implements InMemoryDbService {
     if (cakes.length > 0) {
       let cakeIds: number[] = [];
       cakes.forEach((individualCake) => {
+        if (!individualCake.id)
+          return;
         cakeIds.push(individualCake.id);
       })
 

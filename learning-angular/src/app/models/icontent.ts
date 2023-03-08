@@ -1,5 +1,5 @@
 export interface IContent {
-  id: number;
+  id?: number;
   type?: string;
   imageUrl: string;
   body: string;
