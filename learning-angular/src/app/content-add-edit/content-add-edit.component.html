@@ -1,0 +1,7 @@
+<h2>Add Cake</h2>
+<label>Type: <input [(ngModel)]="cakeToAdd.type"></label>
+<label>Image URL<input [(ngModel)]="cakeToAdd.imageUrl"></label>
+<label>Body: <input [(ngModel)]="cakeToAdd.body"></label>
+<button (click)="addContentToServer()" [disabled]="cakeToAdd.id != undefined">Add Me</button>
+
+<div *ngIf="cakeToAdd.id != undefined">Content was added successfully! ID: {{cakeToAdd.id}}</div>

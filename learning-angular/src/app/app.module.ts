@@ -18,6 +18,7 @@ import { HttpClientModule } from
 import { HttpClientInMemoryWebApiModule } from
   "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { ContentAddEditComponent } from './content-add-edit/content-add-edit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentDetailComponent,
     PageNotFoundComponent,
     TopNavigationComponent,
-    ReactiveFormsExampleComponent
+    ReactiveFormsExampleComponent,
+    ContentAddEditComponent
   ],
   imports: [
     BrowserModule,

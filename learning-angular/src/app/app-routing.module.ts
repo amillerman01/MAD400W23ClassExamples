@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ContentListComponent } from './content-list/content-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { ContentAddEditComponent } from './content-add-edit/content-add-edit.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
     component: ContentDetailComponent
   },
   {
+    path: "add",
+    component: ContentAddEditComponent,
+  },
+  {
     path: "**",
     component: PageNotFoundComponent,
   }
@@ -31,6 +36,6 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  exports:[RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
